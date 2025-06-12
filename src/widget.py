@@ -22,4 +22,7 @@ def mask_account_card(card_info: str) -> str:  # Visa Platinum 7000 79** **** 63
 #
 def get_date(date_info: str) -> str:  # "2024-03-11T02:26:18.671407"
     """принимает на вход строку с датой  и возращает в другом формате"""
+    if len(date_info)<10:return ""
+    if date_info[8:10].isdigit()==False or date_info[5:7].isdigit()==False or date_info[0:4].isdigit()==False:
+        return ""
     return f"{date_info[8:10]}.{date_info[5:7]}.{date_info[0:4]}"

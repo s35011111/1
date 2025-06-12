@@ -1,7 +1,7 @@
-from typing import Iterable, Optional
+from typing import Any
 
 
-def filter_by_state(dictionary_list: Optional, state_key: str = "EXECUTED") -> Iterable:
+def filter_by_state(dictionary_list: "Any", state_key: str = "EXECUTED") ->"Any":
     """принимает список словарей возвращает новый список словарей, содержащий только те словари,
     у которых ключ state_key соответствует указанному значению"""
     dictionary_list_result = []
@@ -11,6 +11,6 @@ def filter_by_state(dictionary_list: Optional, state_key: str = "EXECUTED") -> I
     return dictionary_list_result
 
 
-def sort_by_date(dictionary_list: Optional, sort_order: bool = True) -> Iterable:
+def sort_by_date(dictionary_list: "Any", sort_order: bool = True) ->"Any":
     """Функция возвращает новый список, отсортированный по дате"""
     return sorted(dictionary_list, key=lambda x: x["date"], reverse=sort_order)
