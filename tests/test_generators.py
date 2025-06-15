@@ -4,7 +4,7 @@ from src.generators import card_number_generator, filter_by_currency, transactio
 from tests.conftest import transactions
 
 
-def test_filter_by_currency(transactions: Any) -> Any:
+def test_filter_by_currency(transactions: Any) -> None:
     generator = filter_by_currency(transactions, "USD")
     assert next(generator) == {
         "id": 939719570,
@@ -39,7 +39,7 @@ def test_filter_by_currency(transactions: Any) -> Any:
     assert next(generator) == {}
 
 
-def test_transaction_descriptions(transactions: Any) -> Any:
+def test_transaction_descriptions(transactions: Any) -> None:
     generator = transaction_descriptions(transactions)
     assert next(generator) == "Перевод организации"
     assert next(generator) == "Перевод со счета на счет"
