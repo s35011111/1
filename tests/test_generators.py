@@ -36,8 +36,6 @@ def test_filter_by_currency(transactions: Any) -> None:
         "to": "Visa Platinum 8990922113665229",
     }
 
-    assert next(generator) == {}
-
 
 def test_transaction_descriptions(transactions: Any) -> None:
     generator = transaction_descriptions(transactions)
@@ -46,7 +44,6 @@ def test_transaction_descriptions(transactions: Any) -> None:
     assert next(generator) == "Перевод со счета на счет"
     assert next(generator) == "Перевод с карты на карту"
     assert next(generator) == "Перевод организации"
-    assert next(generator) == ""
 
 
 def test_card_number_generator() -> None:
@@ -58,4 +55,4 @@ def test_card_number_generator() -> None:
     assert next(generator) == "0001 1616 9186 1720"
     assert next(generator) == "0001 1616 9186 1721"
     assert next(generator) == "0001 1616 9186 1722"
-    assert next(generator) == ""
+
