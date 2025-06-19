@@ -11,6 +11,7 @@
 
 
 ## Функции и файлы содержащиеся в проекте
++ src\decorators.py 	log
 + src\generators.py 	filter_by_currency 	
 + src\generators.py 	transaction_descriptions 
 + src\generators.py 	card_number_generator 	
