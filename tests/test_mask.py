@@ -25,7 +25,7 @@ def test_get_mask_card_number(number: str, mask_number: str) -> Any:
 
 def test_get_mask_account() -> Any:
     assert get_mask_account("64686473678894779589") == "**9589"
-    assert get_mask_account("73654108430135874305") == "**4305"
+    assert get_mask_account(73654108430135874305) == ""
     assert get_mask_account("35383033474447895560") == "**5560"
     assert get_mask_account("73654108430135874305") == "**4305"
     assert get_mask_account("779589") == "**9589"

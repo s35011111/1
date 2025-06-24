@@ -1,0 +1,6 @@
+2025-06-24 19:46:11,036 utils.py DEBUG reading_json : input C:/Users/Admin/PycharmProjects/PythonProject1/data/operations.json
+2025-06-24 19:46:11,037 utils.py DEBUG reading_json : input operations.json
+2025-06-24 19:46:11,038 utils.py ERROR reading_json : [Errno 2] No such file or directory: 'operations.json'
+2025-06-24 19:46:11,043 utils.py DEBUG transaction_amount_rub : input 2019-03-23T01:09:46.296404
+2025-06-24 19:46:11,045 utils.py ERROR transaction_amount_rub : 'date'
+2025-06-24 19:46:11,050 utils.py DEBUG transaction_amount_rub : input 2018-06-30T02:08:58.425572

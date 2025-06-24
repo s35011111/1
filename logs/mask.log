@@ -1,0 +1,25 @@
+2025-06-24 19:46:10,997 mask.py DEBUG get_mask_card_number : input 7000792289606361, <class 'str'>
+2025-06-24 19:46:11,000 mask.py DEBUG get_mask_card_number : input 1596837868705199, <class 'str'>
+2025-06-24 19:46:11,004 mask.py DEBUG get_mask_card_number : input 8990922113665229, <class 'str'>
+2025-06-24 19:46:11,006 mask.py DEBUG get_mask_card_number : input 0007922896063, <class 'str'>
+2025-06-24 19:46:11,010 mask.py DEBUG get_mask_card_number : input 30135874, <class 'str'>
+2025-06-24 19:46:11,013 mask.py DEBUG get_mask_card_number : input , <class 'str'>
+2025-06-24 19:46:11,017 mask.py DEBUG get_mask_card_number : input 35, <class 'str'>
+2025-06-24 19:46:11,019 mask.py DEBUG get_mask_card_number : input 870519, <class 'str'>
+2025-06-24 19:46:11,021 mask.py DEBUG get_mask_card_number : input df5meof, <class 'str'>
+2025-06-24 19:46:11,023 mask.py DEBUG get_mask_account : input 64686473678894779589, <class 'str'>
+2025-06-24 19:46:11,024 mask.py DEBUG get_mask_account : input 73654108430135874305, <class 'int'>
+2025-06-24 19:46:11,024 mask.py ERROR get_mask_account : object of type 'int' has no len()
+2025-06-24 19:46:11,024 mask.py DEBUG get_mask_account : input 35383033474447895560, <class 'str'>
+2025-06-24 19:46:11,024 mask.py DEBUG get_mask_account : input 73654108430135874305, <class 'str'>
+2025-06-24 19:46:11,024 mask.py DEBUG get_mask_account : input 779589, <class 'str'>
+2025-06-24 19:46:11,024 mask.py DEBUG get_mask_account : input 301, <class 'str'>
+2025-06-24 19:46:11,024 mask.py DEBUG get_mask_account : input , <class 'str'>
+2025-06-24 19:46:11,024 mask.py DEBUG get_mask_account : input fdsg5nbs, <class 'str'>
+2025-06-24 19:46:11,055 mask.py DEBUG get_mask_account : input 64686473678894779589, <class 'str'>
+2025-06-24 19:46:11,056 mask.py DEBUG get_mask_card_number : input 1596837868705199, <class 'str'>
+2025-06-24 19:46:11,056 mask.py DEBUG get_mask_account : input 35383033474447895560, <class 'str'>
+2025-06-24 19:46:11,056 mask.py DEBUG get_mask_card_number : input 30135874, <class 'str'>
+2025-06-24 19:46:11,056 mask.py DEBUG get_mask_account : input 779589, <class 'str'>
+2025-06-24 19:46:11,056 mask.py DEBUG get_mask_card_number : input 301, <class 'str'>
+2025-06-24 19:46:11,056 mask.py DEBUG get_mask_card_number : input , <class 'str'>
