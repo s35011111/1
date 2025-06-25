@@ -14,11 +14,15 @@ def get_mask_card_number(card_number: str) -> str:  # XXXX XX** **** XXXX
     logger.debug(f": input {card_number}, {type(card_number)}")
     try:
         if len(card_number) < 6:
-            return f""
-        return f"{card_number[0:4]} {card_number[4:6]}** **** {card_number[-4:]}"
+            result = f""
+        else:
+            result = f"{card_number[0:4]} {card_number[4:6]}** **** {card_number[-4:]}"
     except TypeError as e:
         logger.error(": %s", e)
         return f""
+
+    logger.info(f"result: {result}")
+    return result
 
 
 def get_mask_account(account_number: str) -> str:  # **XXXX
@@ -26,10 +30,11 @@ def get_mask_account(account_number: str) -> str:  # **XXXX
     logger.debug(f": input {account_number}, {type(account_number)}")
     try:
         if len(account_number) < 6:
-            return f""
-        return f"**{account_number[-4:]}"
+            result = f""
+        else:
+            result = f"**{account_number[-4:]}"
+        logger.info(f"result: {result}")
+        return result
     except TypeError as e:
         logger.error(": %s", e)
         return f""
-
-

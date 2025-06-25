@@ -20,8 +20,9 @@ def reading_json(operations_file: str) -> Any:
     список словарей с данными о финансовых транзакциях"""
     logger.debug(f": input {operations_file}")
     try:
-        with open(operations_file, "r", encoding="utf-8", errors="replace") as f:  ##""
+        with open(operations_file, "r", encoding="utf-8", errors="replace") as f:
             result_dict = json.load(f)
+        logger.info(result_dict[0]["date"])
         return result_dict
     except (json.JSONDecodeError, TypeError, KeyError, ValueError, FileNotFoundError) as e:
         logger.error(": %s", e)
@@ -37,23 +38,27 @@ def transaction_amount_rub(transaction_dict: dict) -> float:
         logger.error(": %s", e)
     try:
         if not transaction_dict:
-            return 0.0
-        if transaction_dict["operationAmount"]["currency"]["code"] == "RUB":
-            return float(transaction_dict["operationAmount"]["amount"])
+            result = 0.0
 
-        amount_ = transaction_dict["operationAmount"]["amount"]
-        from_ = transaction_dict["operationAmount"]["currency"]["code"]
-        to_ = "RUB"
+        elif transaction_dict["operationAmount"]["currency"]["code"] == "RUB":
+            result = float(transaction_dict["operationAmount"]["amount"])
+        else:
+            amount_ = transaction_dict["operationAmount"]["amount"]
+            from_ = transaction_dict["operationAmount"]["currency"]["code"]
+            to_ = "RUB"
 
-        load_dotenv()
-        api_token = os.getenv("API_KEY")
-        headers_ = {"apikey": f"{api_token}"}
-        response = requests.get(
-            f"https://api.apilayer.com/exchangerates_data/convert?to={to_}&from={from_}&amount={amount_}",
-            headers=headers_,
-        )
-        dict_result = json.loads(response.text)
-        return round(float(dict_result["result"]), 2)
+            load_dotenv()
+            api_token = os.getenv("API_KEY")
+            headers_ = {"apikey": f"{api_token}"}
+            response = requests.get(
+                f"https://api.apilayer.com/exchangerates_data/convert?to={to_}&from={from_}&amount={amount_}",
+                headers=headers_,
+            )
+            dict_result = json.loads(response.text)
+            result = round(float(dict_result["result"]), 2)
+        logger.info(result)
+        return result
+
     except Exception as e:
         logger.error(": %s", e)
         return 0.0
