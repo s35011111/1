@@ -11,13 +11,19 @@
 
 
 ## Функции и файлы содержащиеся в проекте
-+ src\decorators.py 	log
-+ src\generators.py 	filter_by_currency 	
-+ src\generators.py 	transaction_descriptions 
-+ src\generators.py 	card_number_generator 	
-+ src\mask.py 	    	get_mask_card_number 	
-+ src\mask.py 	    	get_mask_account 	
-+ src\processing.py 	filter_by_state 	
-+ src\processing.py 	sort_by_date 	
-+ src\widget.py 		mask_account_card 	
-+ src\widget.py 		get_date
++ src\decorators.py -	log 	
++ src\decorators.py -	log.decorator_function 	
++ src\decorators.py -	log.decorator_function.inner 		
++ src\generators.py -	filter_by_currency 	
++ src\generators.py -	transaction_descriptions 		
++ src\generators.py -	card_number_generator 	
++ src\get_data.py -	reading_csv 	
++ src\get_data.py -	reading_excel 	
++ src\mask.py -	get_mask_card_number 	
++ src\mask.py -	get_mask_account 	
++ src\processing.py -	filter_by_state 	
++ src\processing.py -	sort_by_date 	
++ src\utils.py -	reading_json 		
++ src\utils.py -	transaction_amount_rub 	
++ src\widget.py -	mask_account_card 	
++ src\widget.py -	get_date
